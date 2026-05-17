@@ -83,12 +83,23 @@
             justify-content: flex-start;
             position: relative;
             background-color: #F7ECEF; /* Fallback em tom de rosa claro */
-            background-image: url('img/background-milafiore-floricultura-sjc.jpg'); /* Nova imagem de fundo configurada na pasta img */
+            margin: 0;
+        }
+
+        /* Camada Isolada de Background Fixo - Evita pulos e problemas de profundidade (z-index) no Safari */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/background-milafiore-floricultura-sjc.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Congela a imagem de fundo para que ela não role junto */
-            margin: 0;
+            z-index: 1; /* Mantido estritamente abaixo do container-wrapper */
+            pointer-events: none;
         }
 
         /* Contentor Principal - Card Unificado com transparência total (sem blur) sobre a imagem de fundo */
@@ -100,7 +111,7 @@
             flex-direction: column;
             justify-content: space-between; /* Empurra o rodapé para a base naturalmente */
             align-items: center;
-            z-index: 2;
+            z-index: 2; /* Sobrepõe com segurança o background fixo (body::before) */
             padding: 40px 0 0 0;
             position: relative;
             box-sizing: border-box;
@@ -125,7 +136,7 @@
 
         .logo-container {
             width: 85%;
-            margin-bottom: 4px; /* Reduzido de 12px para 4px para aproximar ao máximo do H1, mantendo apenas 1 parágrafo de distância */
+            margin-bottom: -15px; /* Margem negativa para anular qualquer canvas vazio/transparente do PNG original */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -137,6 +148,8 @@
             max-height: 270px; /* Logotipo de alta visibilidade */
             object-fit: contain;
             filter: drop-shadow(0px 4px 8px rgba(156, 34, 93, 0.10)); /* Sombra sutil para o logotipo */
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
