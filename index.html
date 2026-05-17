@@ -8,8 +8,9 @@
     <!-- Favicon Oficial -->
     <link rel="icon" type="image/png" href="/img/favicon.png">
 
-    <!-- Preload da Logomarca para Melhorar LCP -->
+    <!-- Preload da Logomarca e do Background para Melhorar LCP -->
     <link rel="preload" as="image" href="img/logotipo-mi-la-fiore.png">
+    <link rel="preload" as="image" href="img/background-milafiore-floricultura-sjc.jpg">
 
     <!-- Meta Tags Estratégicas de SEO Local -->
     <meta name="description" content="Mi La Fiore em São José dos Campos: flores frescas, cestas personalizadas de café da manhã e presentes exclusivos no Jardim São Dimas. Peça pelo iFood ou WhatsApp.">
@@ -81,11 +82,15 @@
             align-items: center;
             justify-content: flex-start;
             position: relative;
-            background-color: #F7ECEF; /* Fundo alterado para um tom de rosa claro, romântico e sofisticado */
+            background-color: #F7ECEF; /* Fallback em tom de rosa claro */
+            background-image: url('img/background-milafiore-floricultura-sjc.jpg'); /* Nova imagem de fundo configurada na pasta img */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             margin: 0;
         }
 
-        /* Contentor Principal - Card Unificado com Glassmorphism real sobre o fundo rosa */
+        /* Contentor Principal - Card Unificado com Glassmorphism real sobre a nova imagem de fundo */
         .container-wrapper {
             width: 100%;
             max-width: 420px;
@@ -121,7 +126,7 @@
 
         .logo-container {
             width: 85%;
-            margin-bottom: 24px;
+            margin-bottom: 12px; /* Espaço reduzido pela metade aproximando ao H1 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -130,7 +135,7 @@
         .logo-img {
             width: 100%;
             height: auto;
-            max-height: 270px; /* Logotipo ampliado em 30% para excelente visibilidade */
+            max-height: 270px; /* Logotipo de alta visibilidade */
             object-fit: contain;
             filter: drop-shadow(0px 4px 8px rgba(156, 34, 93, 0.10)); /* Sombra suave para o logotipo */
         }
@@ -226,7 +231,7 @@
             font-size: 0.76rem;
             display: block;
             margin-bottom: 6px;
-            color: #9c225d; /* Assinatura da profissional em magenta */
+            color: #FFFFFF; /* Alto contraste e legibilidade */
         }
 
         .footer-address-wrapper {
@@ -249,7 +254,7 @@
         }
 
         .footer-link:hover {
-            color: #9c225d;
+            color: #FFFFFF;
             text-decoration: underline;
         }
 
@@ -265,14 +270,14 @@
         }
 
         .dev-link {
-            color: #9c225d; /* Destaque magenta oficial no hiperlink */
+            color: #FFFFFF; /* Excelente contraste */
             text-decoration: none;
             font-weight: 600;
             transition: color 0.2s ease;
         }
 
         .dev-link:hover {
-            color: #FFFFFF;
+            color: #F7ECEF; /* Feedback de hover em tom de rosa claro sofisticado */
             text-decoration: underline;
         }
     </style>
