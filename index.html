@@ -83,23 +83,11 @@
             justify-content: flex-start;
             position: relative;
             background-color: #F7ECEF; /* Fallback em tom de rosa claro */
-            margin: 0;
-        }
-
-        /* Camada Isolada de Background Fixo - Evita pulos e problemas de profundidade (z-index) no Safari */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('img/background-milafiore-floricultura-sjc.jpg');
+            background-image: url('img/background-milafiore-floricultura-sjc.jpg'); /* Imagem configurada de forma nativa e rolável no body */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            z-index: 1; /* Mantido estritamente abaixo do container-wrapper */
-            pointer-events: none;
+            margin: 0;
         }
 
         /* Contentor Principal - Card Unificado com transparência total (sem blur) sobre a imagem de fundo */
@@ -111,7 +99,7 @@
             flex-direction: column;
             justify-content: space-between; /* Empurra o rodapé para a base naturalmente */
             align-items: center;
-            z-index: 2; /* Sobrepõe com segurança o background fixo (body::before) */
+            z-index: 2;
             padding: 40px 0 0 0;
             position: relative;
             box-sizing: border-box;
@@ -136,7 +124,7 @@
 
         .logo-container {
             width: 85%;
-            margin-bottom: -15px; /* Margem negativa para anular qualquer canvas vazio/transparente do PNG original */
+            margin-bottom: -45px; /* Margem negativa otimizada para encurtar totalmente a distância do H1 */
             display: flex;
             justify-content: center;
             align-items: center;
