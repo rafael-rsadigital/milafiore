@@ -6,7 +6,7 @@
     <title>Mi La Fiore | Floricultura, Cestas e Presentes – São José dos Campos</title>
     
     <!-- Favicon Oficial -->
-    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link class="icon" type="image/png" href="/img/favicon.png">
 
     <!-- Preload da Logomarca e do Background para Melhorar LCP -->
     <link rel="preload" as="image" href="img/logotipo-mi-la-fiore.png">
@@ -87,6 +87,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed; /* Congela a imagem de fundo para que ela não role junto */
             margin: 0;
         }
 
@@ -124,7 +125,7 @@
 
         .logo-container {
             width: 85%;
-            margin-bottom: 12px; /* Espaço reduzido pela metade aproximando ao H1 */
+            margin-bottom: 4px; /* Reduzido de 12px para 4px para aproximar ao máximo do H1, mantendo apenas 1 parágrafo de distância */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -135,7 +136,7 @@
             height: auto;
             max-height: 270px; /* Logotipo de alta visibilidade */
             object-fit: contain;
-            filter: drop-shadow(0px 4px 8px rgba(156, 34, 93, 0.10)); /* Sombra suave para o logotipo */
+            filter: drop-shadow(0px 4px 8px rgba(156, 34, 93, 0.10)); /* Sombra sutil para o logotipo */
         }
 
         h1 {
