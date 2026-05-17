@@ -90,7 +90,7 @@
             margin: 0;
         }
 
-        /* Contentor Principal - Card Unificado com Glassmorphism real sobre a nova imagem de fundo */
+        /* Contentor Principal - Card Unificado com transparência total (sem blur) sobre a imagem de fundo */
         .container-wrapper {
             width: 100%;
             max-width: 420px;
@@ -104,10 +104,8 @@
             position: relative;
             box-sizing: border-box;
             
-            /* Efeito Translúcido (Glassmorphism) otimizado para revelar os traços da rosa ao fundo */
-            background: rgba(255, 255, 255, 0.30); /* Reduzido de 0.60 para 0.30 para maior transparência */
-            backdrop-filter: blur(6px); /* Desfoque reduzido de 15px para 6px para revelar a foto de fundo */
-            -webkit-backdrop-filter: blur(6px);
+            /* Transparência suave para revelar os traços da rosa ao fundo com total nitidez */
+            background: rgba(255, 255, 255, 0.30); /* Mantido translúcido para contraste do conteúdo */
             
             border-left: 1px solid rgba(156, 34, 93, 0.08); /* Borda em tom magenta bem discreto */
             border-right: 1px solid rgba(156, 34, 93, 0.08);
@@ -166,9 +164,7 @@
             justify-content: center;
             width: 85%;
             margin-bottom: 12px;
-            background: rgba(255, 255, 255, 0.45); /* Aumentada a transparência de 0.65 para 0.45 */
-            backdrop-filter: blur(3px); /* Reduzido de 5px para 3px */
-            -webkit-backdrop-filter: blur(3px);
+            background: rgba(255, 255, 255, 0.45); /* Aumentada a transparência para manter a fluidez do fundo */
             border: 1px solid rgba(156, 34, 93, 0.25); /* Borda magenta translúcida */
             color: #9c225d; /* Texto em tom magenta corporativo */
             font-family: 'Jost', sans-serif;
