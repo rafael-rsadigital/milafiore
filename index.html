@@ -83,11 +83,23 @@
             justify-content: flex-start;
             position: relative;
             background-color: #F7ECEF; /* Fallback em tom de rosa claro */
-            background-image: url('img/background-milafiore-floricultura-sjc.jpg'); /* Imagem configurada de forma nativa e rolável no body */
+            margin: 0;
+        }
+
+        /* Camada Absoluta de Background que acompanha 100% da altura do conteúdo, rolando suavemente */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/background-milafiore-floricultura-sjc.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            margin: 0;
+            z-index: 1; /* Fica abaixo do container de conteúdo */
+            pointer-events: none;
         }
 
         /* Contentor Principal - Card Unificado com transparência total (sem blur) sobre a imagem de fundo */
@@ -99,7 +111,7 @@
             flex-direction: column;
             justify-content: space-between; /* Empurra o rodapé para a base naturalmente */
             align-items: center;
-            z-index: 2;
+            z-index: 2; /* Garante que fique sempre acima do plano de fundo absolute */
             padding: 40px 0 0 0;
             position: relative;
             box-sizing: border-box;
@@ -124,7 +136,7 @@
 
         .logo-container {
             width: 85%;
-            margin-bottom: -45px; /* Margem negativa otimizada para encurtar totalmente a distância do H1 */
+            margin-bottom: -75px; /* Aumentada a margem negativa para aproximar perfeitamente o H1 da logo sem sobras */
             display: flex;
             justify-content: center;
             align-items: center;
