@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi La Fiore | Floricultura, Cestas e Presentes – São José dos Campos</title>
+    
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+
+    <!-- Preload da Logomarca para Melhorar LCP -->
+    <link rel="preload" as="image" href="img/logotipo-mi-la-fiore.png">
+
+    <!-- Meta Tags Estratégicas de SEO Local -->
+    <meta name="description" content="Mi La Fiore em São José dos Campos: flores frescas, cestas personalizadas de café da manhã e presentes exclusivos no Jardim São Dimas. Peça pelo iFood ou WhatsApp.">
+    
+    <!-- Cor de Tema da Interface do Navegador (Theme Color - Tom Areia Sofisticado) -->
+    <meta name="theme-color" content="#F4EFEA">
+
+    <!-- URL Canonicalizada Oficial para impedir desvio de autoridade -->
+    <link rel="canonical" href="https://milafiore.vercel.app/">
+
+    <!-- Open Graph (Redes Sociais & WhatsApp Preview) -->
+    <meta property="og:title" content="Mi La Fiore | Flores, Cestas e Presentes em SJC">
+    <meta property="og:description" content="Flores de excelência e cestas personalizadas para momentos inesquecíveis em São José dos Campos. Faça seu pedido!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milafiore.vercel.app/">
+    <meta property="og:image" content="https://milafiore.vercel.app/img/mi-la-fiore-capa.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mi La Fiore | Flores e Presentes">
+    <meta name="twitter:description" content="A melhor floricultura de São José dos Campos no Jardim São Dimas.">
+    <meta name="twitter:image" content="https://milafiore.vercel.app/img/mi-la-fiore-capa.jpg">
+
+    <!-- Google Fonts Gratuitas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD (Marcação de Dados Estruturados de Negócio Local para Floricultura) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Florist",
+      "name": "Mi La Fiore Flores e Presentes",
+      "url": "https://milafiore.vercel.app/",
+      "image": "https://milafiore.vercel.app/img/logotipo-mi-la-fiore.png",
+      "telephone": "+55-12-97402-4791",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Engenheiro Francisco José Longo, 665",
+        "addressLocality": "São José dos Campos",
+        "addressRegion": "SP",
+        "postalCode": "12245-011",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/mi_lafiore/",
+        "https://www.facebook.com/profile.php?id=100063993107302"
+      ]
+    }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: -webkit-fill-available;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #2E2925; /* Texto principal em cinza escuro quente */
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            background-color: #F4EFEA; /* Fundo em tom areia claro elegante */
+            margin: 0;
+        }
+
+        /* Contentor Principal - Card Unificado com Glassmorphism real sobre o Areia */
+        .container-wrapper {
+            width: 100%;
+            max-width: 420px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Empurra o rodapé para a base naturalmente */
+            align-items: center;
+            z-index: 2;
+            padding: 40px 0 0 0;
+            position: relative;
+            box-sizing: border-box;
+            
+            /* Efeito Translúcido (Glassmorphism) com fundo leitoso sutil */
+            background: rgba(255, 255, 255, 0.60); 
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            
+            border-left: 1px solid rgba(156, 34, 93, 0.08); /* Borda em tom magenta bem discreto */
+            border-right: 1px solid rgba(156, 34, 93, 0.08);
+            box-shadow: 0 0 35px rgba(156, 34, 93, 0.04); /* Sombra suave */
+        }
+
+        /* Conteúdo Interno com Proteção de Margem para Elementos Soltos */
+        .content-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            width: 85%;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: auto;
+            max-height: 207px; /* Imponência e destaque da assinatura da marca */
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 8px rgba(156, 34, 93, 0.10)); /* Sombra suave para o logotipo */
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 1.35rem;
+            line-height: 1.3;
+            letter-spacing: 0.05em;
+            color: #7A1343; /* Tom vinho profundo, sofisticado e perfeitamente legível */
+            font-weight: 400;
+            text-align: center;
+            margin: 0;
+            padding: 0 16px;
+        }
+
+        /* Divisor Magenta Nobre */
+        .clinical-divider {
+            width: 35px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #9c225d, transparent);
+            margin: 20px 0 24px 0;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 85%;
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.65); /* Translúcido combinando com o fundo */
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(156, 34, 93, 0.25); /* Borda magenta translúcida */
+            color: #9c225d; /* Texto em tom magenta corporativo */
+            font-family: 'Jost', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 14px 24px;
+            border-radius: 10px; /* Cantos arredondados suavizados */
+            transition: all 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            box-shadow: 0 2px 6px rgba(156, 34, 93, 0.02);
+        }
+
+        /* Transição otimizada para dispositivos móveis com translateY */
+        .action-btn:hover, .action-btn:active {
+            background: rgba(156, 34, 93, 0.06); /* Leve toque magenta de fundo */
+            border-color: rgba(156, 34, 93, 0.7);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(156, 34, 93, 0.10);
+        }
+
+        /* Estilo Exclusivo de Destaque para o iFood */
+        .ifood-btn {
+            background: rgba(234, 29, 44, 0.08);
+            border: 1px solid rgba(234, 29, 44, 0.35);
+            color: #EA1D2C;
+            font-weight: 500;
+        }
+
+        .ifood-btn:hover, .ifood-btn:active {
+            background: rgba(234, 29, 44, 0.15);
+            border-color: rgba(234, 29, 44, 0.8);
+            box-shadow: 0 4px 15px rgba(234, 29, 44, 0.12);
+        }
+
+        footer {
+            width: 100%;
+            background: #2E2925; /* Contraste elegante: rodapé escuro */
+            padding: 24px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(156, 34, 93, 0.15);
+            margin-top: 48px;
+            box-sizing: border-box;
+        }
+
+        .footer-content {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.80);
+            line-height: 1.6;
+            letter-spacing: 0.06em;
+        }
+
+        .footer-title {
+            font-weight: 500;
+            font-size: 0.76rem;
+            display: block;
+            margin-bottom: 6px;
+            color: #9c225d; /* Assinatura da profissional em magenta */
+        }
+
+        .footer-address-wrapper {
+            margin: 6px 0;
+        }
+
+        .footer-phone-wrapper {
+            margin-top: 8px;
+        }
+
+        .footer-phone-link {
+            font-weight: 500;
+            font-size: 0.78rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #9c225d;
+            text-decoration: underline;
+        }
+
+        /* Seção de Créditos de Desenvolvimento */
+        .developer-credit {
+            margin-top: 20px;
+            font-size: 0.62rem;
+            color: rgba(255, 255, 255, 0.45); /* Cor sutil de apoio */
+            border-top: 1px solid rgba(255, 255, 255, 0.08); /* Linha divisória ultra fina */
+            padding-top: 14px;
+            letter-spacing: 0.05em;
+            line-height: 1.4;
+        }
+
+        .dev-link {
+            color: #9c225d; /* Destaque magenta oficial no hiperlink */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .dev-link:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Container Centralizado do Mini Site (Footer integrado naturalmente) -->
+    <div class="container-wrapper">
+        
+        <!-- Conteúdo Superior e Centralizado -->
+        <div class="content-container">
+            
+            <div class="logo-container">
+                <img class="logo-img" 
+                     src="img/logotipo-mi-la-fiore.png" 
+                     alt="Logotipo oficial de Mi La Fiore Flores e Presentes" 
+                     id="logoImg" 
+                     onerror="handleLogoFallback()">
+            </div>
+
+            <!-- H1 Estratégico Otimizado para SEO Local de Floricultura -->
+            <h1>
+                Floricultura - Presentes - Cestas Personalizadas - São José dos Campos
+            </h1>
+
+            <!-- Divisor Sutil Magenta -->
+            <div class="clinical-divider"></div>
+
+            <!-- Botão 1: WhatsApp -->
+            <a href="https://wa.me/5512974024791?text=Oi!%20Vim%20pelo%20link%20da%20Mi%20La%20Fiore%20e%20gostaria%20de%20encomendar%20flores%20ou%20presentes." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="action-btn">
+                Falar no WhatsApp
+            </a>
+
+            <!-- Botão 2: iFood (Exclusivo para Floricultura / Delivery Rápido) -->
+            <a href="https://www.ifood.com.br/delivery/sao-jose-dos-campos-sp/mi-la-fiore-flores-e-cestas-jardim-sao-dimas" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="action-btn ifood-btn">
+                Peça pelo iFood
+            </a>
+
+            <!-- Botão 3: Instagram -->
+            <a href="https://www.instagram.com/mi_lafiore/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="action-btn">
+                INSTAGRAM
+            </a>
+
+            <!-- Botão 4: Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100063993107302" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="action-btn">
+                FACEBOOK
+            </a>
+
+            <!-- Botão 5: Como Chegar -->
+            <a href="https://maps.app.goo.gl/ck5YZ2YRfhpQVSrT6" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="action-btn">
+                Como Chegar
+            </a>
+
+            <!-- Botão 6: Avaliar -->
+            <a href="https://g.page/r/CXYMJ1bo4lnhEBM/review" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="action-btn">
+                Avalie no Google
+            </a>
+
+        </div>
+
+        <!-- Rodapé do Site com Identidade NAP Atualizada -->
+        <footer>
+            <div class="footer-content">
+                <span class="footer-title">Mi La Fiore Flores e Presentes</span>
+                <div class="footer-address-wrapper">
+                    <a class="footer-link" 
+                       href="https://maps.app.goo.gl/ck5YZ2YRfhpQVSrT6" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Av. Engenheiro Francisco José Longo, 665 – Jardim Sao Dimas<br>
+                        São José dos Campos – SP · CEP 12245-011
+                    </a>
+                </div>
+                <div class="footer-phone-wrapper">
+                    <a class="footer-link footer-phone-link" href="tel:+5512974024791">
+                        (12) 97402-4791
+                    </a>
+                </div>
+                
+                <!-- Crédito de Desenvolvimento com Link RSA Digital e Mensagem Personalizada Mi La Fiore -->
+                <div class="developer-credit">
+                    Desenvolvido por <a class="dev-link" 
+                                       href="https://wa.me/5512988052097?text=Oi!%20Vim%20pelo%20link%20da%20Mi%20La%20Fiore%20e%20gostaria%20de%20saber%20mais%20sobre%20suas%20solu%C3%A7%C3%B5es%20digitais%20e%20Google%20Meu%20Neg%C3%B3cio." 
+                                       target="_blank" 
+                                       rel="noopener noreferrer">RSA Digital</a> | Soluções Digitais e Expert em Google Meu Negócio
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Fallback dinâmico inspirado na Mi La Fiore com flor vetorial estilizada e tons magenta em gradiente
+        function handleLogoFallback() {
+            const logo = document.getElementById('logoImg');
+            if (logo) {
+                logo.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 130" width="100%25" height="100%25"><defs><linearGradient id="magenta" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%239c225d"/><stop offset="50%" stop-color="%23C23B7C"/><stop offset="100%" stop-color="%237A1343"/></linearGradient></defs><path d="M150,15 C145,28 135,35 125,35 C115,35 110,25 120,15 C130,5 140,8 150,15 Z" fill="url(%23magenta)" opacity="0.85"/><path d="M150,15 C155,28 165,35 175,35 C185,35 190,25 180,15 C170,5 160,8 150,15 Z" fill="url(%23magenta)" opacity="0.85"/><path d="M150,30 C138,32 128,42 128,52 C128,62 138,65 150,55 C162,65 172,62 172,52 C172,42 162,32 150,30 Z" fill="url(%23magenta)" opacity="0.95"/><circle cx="150" cy="32" r="6" fill="%23F4EFEA"/><text x="150" y="85" font-family="Cormorant Garamond, serif" font-size="24" fill="%237A1343" text-anchor="middle" letter-spacing="2" font-weight="bold">Mi La Fiore</text><text x="150" y="105" font-family="Jost, sans-serif" font-size="8" fill="%239c225d" text-anchor="middle" letter-spacing="3" font-weight="500">FLORES E PRESENTES</text></svg>';
+            }
+        }
+    </script>
+</body>
+</html>
